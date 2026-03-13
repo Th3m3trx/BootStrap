@@ -1,17 +1,35 @@
-body::before {
-  display: block;
-  content: '';
-  height: 60px;
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #222933 0%, #0f1115 55%);
 }
 
-#map {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+.card {
+  border-radius: 0.85rem;
 }
 
-@media (min-width: 768px) {
-  .news-input {
-    width: 50%;
-  }
+.modifier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.6rem;
+}
+
+.modifier-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid #3f4a5a;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.92rem;
+  background: #181c24;
+  cursor: pointer;
+}
+
+.modifier-chip input {
+  accent-color: #0d6efd;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
 }
